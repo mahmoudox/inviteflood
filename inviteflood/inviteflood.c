@@ -59,7 +59,7 @@ int main (int argc, char *argv[] )
                 destPort = atoi ( optarg );     // Destination port.
                 break;
             case 'l':
-                lineString = optarg;            // Line identifier, needed for SNOM.
+                lineString = strdup(optarg);            // Line identifier, needed for SNOM.
                 break;
             case 's':
                 sleepTimeSec = atol ( optarg ); // Sleep btwn msgs (seconds).
